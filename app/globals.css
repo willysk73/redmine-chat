@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Markdown Content Styles */
+.markdown-content {
+  line-height: 1.6;
+}
+
+.markdown-content > * + * {
+  margin-top: 0.75em;
+}
+
+.markdown-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  font-weight: 600;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.markdown-content h1 { font-size: 1.5em; }
+.markdown-content h2 { font-size: 1.3em; }
+.markdown-content h3 { font-size: 1.15em; }
+.markdown-content h4 { font-size: 1.05em; }
+
+.markdown-content p {
+  margin-bottom: 0.75em;
+}
+
+.markdown-content a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.markdown-content a:hover {
+  color: #93c5fd;
+}
+
+.markdown-content code {
+  background-color: rgba(110, 118, 129, 0.4);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.markdown-content pre {
+  background-color: rgba(110, 118, 129, 0.2);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 0.75em 0;
+}
+
+.markdown-content pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.875em;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-left: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.markdown-content li {
+  margin-bottom: 0.25em;
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid #4b5563;
+  padding-left: 1em;
+  margin: 0.75em 0;
+  color: #9ca3af;
+}
+
+.markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.75em 0;
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid #4b5563;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.markdown-content th {
+  background-color: rgba(75, 85, 99, 0.3);
+  font-weight: 600;
+}
+
+.markdown-content hr {
+  border: none;
+  border-top: 1px solid #4b5563;
+  margin: 1.5em 0;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-content strong {
+  font-weight: 700;
+}
+
+.markdown-content em {
+  font-style: italic;
+}
+
+.markdown-content details {
+  background-color: rgba(75, 85, 99, 0.2);
+  border: 1px solid #4b5563;
+  border-radius: 6px;
+  padding: 0.75em;
+  margin: 0.75em 0;
+}
+
+.markdown-content summary {
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  margin: -0.75em;
+  padding: 0.75em;
+  border-radius: 6px;
+}
+
+.markdown-content summary:hover {
+  background-color: rgba(75, 85, 99, 0.3);
+}
+
+.markdown-content details[open] summary {
+  margin-bottom: 0.75em;
+  border-bottom: 1px solid #4b5563;
+  border-radius: 6px 6px 0 0;
+}
+
+.markdown-content details > *:not(summary) {
+  margin-left: 0;
+}
